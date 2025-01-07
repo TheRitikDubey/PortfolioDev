@@ -16,7 +16,7 @@ const ExperienceSection = () => {
       url: "https://www.techolution.com/",
       period: "June 2023 - Present",
       responsibilities: [
-        "Developed and maintained multiple full-stack web applications using React.js and Node.js",
+        "Developed and maintained multiple full-stack web applications using TypeScript, Nextjs, React.js, Express and Node.js",
         "Implemented RESTful APIs and integrated third-party services",
         "Collaborated with cross-functional teams to deliver high-quality solutions",
         "Optimized application performance and improved user experience"
@@ -40,10 +40,10 @@ const ExperienceSection = () => {
         url: "https://bytelearn.ai/",
         period: "April 2022 - Feb 2023",
         responsibilities: [
-          "Assisted in developing responsive web interfaces using React.js",
-          "Participated in code reviews and implemented feedback",
-          "Created reusable components and implemented UI/UX designs",
-          "Learned and applied best practices in frontend development"
+            "Direct hands-on experience with ML model development and optimization, showing technical depth",
+            "Data engineering skills essential for AI applications",
+            "Production engineering capabilities with measurable improvements",
+            "Cross-functional collaboration experience"
         ]
       }
   ];

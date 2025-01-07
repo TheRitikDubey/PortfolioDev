@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import ExperienceSection from './components/ExperienceSection'
+import ProjectsSection from './components/ProjectsSection'
 function App() {
   return (
     <div className="w-full bg-gray-900">
@@ -12,6 +13,11 @@ function App() {
       {/* Experience Section */}
       <section className="py-0">
           <ExperienceSection />
+      </section>
+
+      {/* Project Section */}
+      <section>
+        <ProjectsSection />
       </section>
 
       {/* Skills Section */}

@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { MacbookScrollDemo } from './macbookScroll'
 import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision'
-import { TextGenerateEffect } from './ui/text-generate-effect'
 import { motion, AnimatePresence } from "framer-motion";
-
-
-const title = "Software Engineer with strong experience in Frontend and Backend development, and expertise in AI and Cloud Computing.";
 const titles = [
   "Software Engineer",
   "Experienced in Frontend and Backend Development",

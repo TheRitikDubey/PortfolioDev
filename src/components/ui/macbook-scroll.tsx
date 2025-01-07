@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "../../lib/utils";
 import {
@@ -25,7 +25,6 @@ import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
 // import Image from "next/image";
 import PortfolioAbout from "../PortfolioAbout";
-import ExperienceSection from "../ExperienceSection";
 
 export const MacbookScroll = ({
   src,
@@ -126,7 +125,6 @@ export const Lid = ({
   scaleY,
   rotate,
   translate,
-  src,
 }: {
   scaleX: MotionValue<number>;
   scaleY: MotionValue<number>;
