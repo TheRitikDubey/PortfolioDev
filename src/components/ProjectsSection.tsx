@@ -18,7 +18,7 @@ const ProjectsSection = () => {
       description:
         "Built a responsive frontend project using TypeScript, Tailwind CSS, and AcernityUI, with backend integration via Express.js for seamless API communication.",
       image: PortfolioImg,
-      link: "https://twitter.com/mannupaaji",
+      link: "",
       github: "https://github.com/TheRitikDubey/PortfolioDev",
     },
     {
@@ -26,7 +26,7 @@ const ProjectsSection = () => {
       description:
         "Developed a full-stack web app with authentication (JWT and Google Sign-In via Firebase) and authorization, featuring end-to-end encryption. Built a responsive frontend with React.js and Tailwind CSS, and a backend with Node.js, Express, and MongoDB.",
       image: EcomImg,
-      link: "https://twitter.com/mannupaaji",
+      link: "",
       github: "",
     },
   ];

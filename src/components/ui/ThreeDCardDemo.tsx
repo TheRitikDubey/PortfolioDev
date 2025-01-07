@@ -39,8 +39,8 @@ export function ThreeDCardDemo(props:IProps) {
             // as={Link}
             href="https://twitter.com/mannupaaji"
             target="__blank"
-            className="px-4 py-2 hover:cursor-pointer rounded-xl text-xs font-normal dark:text-white"
-            onClick={() => window.open(props.link, "_blank")}
+            className={`px-4 py-2 ${props.link === ""?'hover:cursor-not-allowed':'hover:cursor-pointer'} rounded-xl text-xs font-normal dark:text-white`}
+            onClick={() => props.link!=="" &&  window.open(props.link, "_blank")}
           >
             Visit Site
           </CardItem>
@@ -48,7 +48,7 @@ export function ThreeDCardDemo(props:IProps) {
             translateZ={20}
             as="button"
             className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-            onClick={() => window.open(props.github, "_blank")}
+            onClick={() => props.link!== "" && window.open(props.github, "_blank")}
           >
             Github
           </CardItem>
