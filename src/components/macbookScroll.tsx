@@ -8,7 +8,7 @@ export function MacbookScrollDemo() {
       <MacbookScroll
         title={
           <span>
-            This is about me and my experience.<br /> No kidding.
+            This is about me and my experience.<br /> Scroll to view.
           </span>
         }
         badge={

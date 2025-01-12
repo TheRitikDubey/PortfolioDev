@@ -3,26 +3,30 @@ import HeroSection from './components/HeroSection'
 import ExperienceSection from './components/ExperienceSection'
 import ProjectsSection from './components/ProjectsSection'
 import { ContainerScroll } from './components/ui/container-scroll-animation'
+import ContactSection from './components/ContactSection'
+import { BackgroundBeams } from './components/ui/background-beams'
+import ContactInfo from './components/ContactInfo'
+import { Element } from 'react-scroll';
 function App() {
   return (
     <div className="w-full bg-gray-900">
       {/* Hero Section */}
       <Navbar />
-      <header className="text-white text-center py-10">
+      <Element name='home' className="text-white text-center py-10">
         <HeroSection />
-      </header>
+      </Element>
       {/* Experience Section */}
-      <section className="py-0">
+      <Element name='experience' className="py-0">
           <ExperienceSection />
-      </section>
+      </Element>
 
       {/* Project Section */}
-      <section>
+      <Element name='work'>
         <ProjectsSection />
-      </section> 
+      </Element> 
 
       {/* Contact Section */}
-      <section className="py-0 bg-black">
+      <Element name='' className="p-4 bg-black">
         <ContainerScroll titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-white dark:text-white">
@@ -33,9 +37,26 @@ function App() {
             </h1>
           </>
         } >
-          <div>IPad Animation</div>
+          <section className='absolute left-[15%] w-[80%] z-10'>
+            {/* <div className='flex flex-row items-baseline justify-between'>
+              <ContactInfo />
+              <ContactSection />
+            </div> */}
+          </section>
+          <BackgroundBeams />
         </ContainerScroll>
-      </section>
+      </Element>
+
+      <Element name='ContactUs'>
+          <div className="text-center p-4 mb-10">
+            <h2 className="text-3xl font-bold text-white">Contact Us</h2>
+            <div className="mt-2 w-24 h-1 bg-blue-500 mx-auto"></div>
+          </div>
+          <div className='flex items-baseline justify-around'>
+                  <ContactInfo />
+                  <ContactSection />
+          </div>
+      </Element>
     </div>
   )
 }

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { MacbookScrollDemo } from './macbookScroll'
 import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision'
 import { motion, AnimatePresence } from "framer-motion";
+import { Link, Element } from 'react-scroll';
+
 const titles = [
   "Software Engineer",
   "Experienced in Frontend and Backend Development",
@@ -51,12 +53,12 @@ const HeroSection = () => {
               </p>
               
               <div className="flex gap-4 pt-4">
-                <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors">
+                <Link className="border border-gray-600 hover:cursor-pointer text-gray-300 px-6 py-2 rounded-md hover:border-gray-500 hover:text-gray-200 transition-colors" to="ContactUs" smooth={true} duration={1500}>
                   Hire Me
-                </button>
-                <button className="border border-gray-600 text-gray-300 px-6 py-2 rounded-md hover:border-gray-500 hover:text-gray-200 transition-colors">
+                </Link>
+                <Link className="border border-gray-600 hover:cursor-pointer text-gray-300 px-6 py-2 rounded-md hover:border-gray-500 hover:text-gray-200 transition-colors" to="work" smooth={true} duration={800}>
                   View Work
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -70,7 +72,9 @@ const HeroSection = () => {
       </div>
     </div>
       </BackgroundBeamsWithCollision>
-        <MacbookScrollDemo />
+      <Element name='about'>
+      <MacbookScrollDemo />
+      </Element>
     </div>
   )
 }
