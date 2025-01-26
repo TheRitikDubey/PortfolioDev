@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
+import toast from 'react-hot-toast';
 
 interface FormData {
   name: string;
@@ -21,6 +22,9 @@ function ContactSection() {
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const BASE_URL = import.meta.env.VITE_API_URL;
+  console.log(BASE_URL);
+  
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -45,10 +49,10 @@ function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (validateForm()) {
       // Here you would typically send the data to your backend
-      console.log('Form submitted:', formData);
+      // console.log('Form submitted:', formData);
+      sendMailToAdmin();
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
     }
@@ -69,6 +73,27 @@ function ContactSection() {
     }
   };
 
+  const sendMailToAdmin = async () => {
+    const apiUrl = `${BASE_URL}/auth/sendMail`
+    const body = {
+      name: formData.name,
+      userEmail: formData.email,
+      message: formData.message
+    }
+    await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    }).then(() => {
+      toast.success('Message sent successfully!')
+    })
+    .catch(() => {
+      toast.error('Failed to send message. Please try again later')
+    })
+  }
+ 
   return (
     <div className="w-[33%] py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full mx-auto bg-white rounded-xl shadow-md overflow-hidden">

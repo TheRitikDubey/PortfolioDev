@@ -49,7 +49,7 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <div className="bg-gray-900 py-2 px-8">
+    <div className="bg-gray-900 py-2 mt-4 px-8">
       <div className="max-w-4xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-12">
