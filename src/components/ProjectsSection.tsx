@@ -1,4 +1,3 @@
-import React from "react";
 import { ThreeDCardDemo } from "./ui/ThreeDCardDemo";
 import SNimg from "../assets/SNimg.png";
 import PortfolioImg from "../assets/DevProfile.png";

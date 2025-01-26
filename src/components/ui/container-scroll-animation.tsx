@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
-import { BackgroundBeams } from "./background-beams";
 
 export const ContainerScroll = ({
   titleComponent,

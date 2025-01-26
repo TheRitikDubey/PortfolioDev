@@ -1,5 +1,3 @@
-import React from 'react';
-
 const PortfolioAbout = () => {
   const highlights = [
     "Developed and maintained multiple full-stack applications using modern technologies",

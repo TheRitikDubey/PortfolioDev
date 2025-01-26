@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 // import { MacbookScrollDemo } from './macbookScroll'
 import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision'
 import { motion, AnimatePresence } from "framer-motion";
