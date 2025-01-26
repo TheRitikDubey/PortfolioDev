@@ -1,5 +1,5 @@
 import { ThreeDCardDemo } from "./ui/ThreeDCardDemo";
-import SNimg from "../assets/SNimg.png"; //snimg is study notion image
+import SNimg from "../assets/SNImg.png"; //snimg is study notion image
 import PortfolioImg from "../assets/DevProfile.png";
 import EcomImg from "../assets/EcomImg.png";
 const ProjectsSection = () => {
