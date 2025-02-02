@@ -16,7 +16,6 @@ function App() {
       <Element name='home' className="text-white text-center py-10">
         <HeroSection />
       </Element>
-
       {/* About Me  */}
       <Element name='about' className="p-4 bg-black">
       <div className="text-center mt-2">
