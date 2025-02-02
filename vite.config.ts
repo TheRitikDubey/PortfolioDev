@@ -10,8 +10,9 @@ export default defineConfig({
       VITE_API_LOCAL: JSON.stringify(process.env.VITE_API_LOCAL),
     },
   },
-  base: '/', // Default: '/'
+  base: './', // Default: '/'
   build: {
     outDir: 'dist', // Default output directory
+    emptyOutDir: true,
   },
 })
