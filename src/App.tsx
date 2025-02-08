@@ -32,7 +32,7 @@ function App() {
             </h1>
           </>
         } >
-          <section className=' max-w-[100%]'>
+          <section className='w-[100%]'>
             <PortfolioAbout/>
           </section>
         </ContainerScroll>
@@ -44,7 +44,7 @@ function App() {
       </Element>
 
       {/* Project Section */}
-      <Element name='work'>
+      <Element className='p-4 lg:p-0' name='work'>
         <ProjectsSection />
       </Element> 
 
@@ -60,9 +60,9 @@ function App() {
             <h2 className="text-3xl font-bold text-white">Contact Us</h2>
             <div className="mt-2 w-24 h-1 bg-blue-500 mx-auto"></div>
           </div>
-          <div className='flex items-baseline justify-around'>
-                  <ContactInfo />
-                  <ContactSection />
+          <div className="flex flex-col-reverse lg:flex-row items-baseline justify-around">
+            <ContactInfo />
+            <ContactSection />
           </div>
       </Element>
       <Toaster />

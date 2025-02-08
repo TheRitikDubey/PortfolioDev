@@ -95,7 +95,7 @@ function ContactSection() {
   }
  
   return (
-    <div className="w-[33%] py-12 px-4 sm:px-6 lg:px-8">
+    <div className="w-full lg:w-[33%] py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full mx-auto bg-white rounded-xl shadow-md overflow-hidden">
         <div className="px-8 py-6">
           <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Contact Us</h2>

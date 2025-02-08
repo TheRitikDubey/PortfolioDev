@@ -1,7 +1,7 @@
 import { Github, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
 const ContactInfo = () => {
   return (
-    <div className='flex gap-12 justify-center text-white flex-col items-baseline h-full'>
+    <div className='flex gap-10 w-full lg:w-[20%] justify-center text-white flex-col p-4 lg:p-0 items-baseline h-full'>
                 <div className='flex gap-4 items-center justify-center'>
                   <Mail />
                   <div>
@@ -23,7 +23,7 @@ const ContactInfo = () => {
                     <p>India</p>
                   </div>
                 </div>
-                <div className=''>
+                <div className='mx-auto'>
                   <h2 className='text-center'>Connect</h2>
                   <div className='flex mt-4 gap-8 items-center'> 
                   <Linkedin className='hover:cursor-pointer' />

@@ -17,7 +17,7 @@ const ProjectsSection = () => {
       description:
         "Built a responsive frontend project using TypeScript, Tailwind CSS, and AcernityUI, with backend integration via Express.js for seamless API communication.",
       image: PortfolioImg,
-      link: "",
+      link: "https://ritik-portfolio-psi.vercel.app/",
       github: "https://github.com/TheRitikDubey/PortfolioDev",
     },
     {
@@ -32,10 +32,10 @@ const ProjectsSection = () => {
   return (
     <div>
       <div className="text-center -mb-10">
-        <h2 className="text-3xl font-bold text-white">Project Experience</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-white">Project Experience</h2>
         <div className="mt-2 w-24 h-1 bg-blue-500 mx-auto"></div>
       </div>
-    <div className="flex gap-2 justify-evenly items-center">
+    <div className="flex flex-col md:flex-row gap-2 justify-evenly items-center">
     {ProjectData.map((project, index) => {
         return (
         <div key={index}>

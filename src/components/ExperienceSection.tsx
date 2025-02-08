@@ -58,19 +58,19 @@ const ExperienceSection = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
+          <div className="absolute hidden lg:block left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
 
           {/* Experience Items */}
           {experiences.map((experience, index) => (
             <div key={index} className="relative mb-16">
               {/* Timeline Dot */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 -mt-2">
+              <div className="absolute hidden lg:block left-1/2 transform -translate-x-1/2 -mt-2">
                 <div className="w-4 h-4 rounded-full bg-blue-500 border-4 border-gray-900"></div>
               </div>
 
               {/* Experience Card */}
               <div className={`
-                bg-gray-800 rounded-lg shadow-lg p-6 w-[calc(50%-40px)]
+                bg-gray-800 rounded-lg shadow-lg p-6 w-full lg:w-[calc(50%-40px)]
                 hover:bg-gray-750 transition-colors duration-300
                 ${index % 2 === 0 ? 'mr-auto' : 'ml-auto'}
               `}>
