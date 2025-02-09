@@ -8,7 +8,7 @@ const PortfolioAbout = () => {
 
 
   return (
-    <div className="bg-gray-900 lg:py-4 lg:px-3 py-2 px-1 rounded-md">
+    <div className="bg-gray-900 lg:py-4 lg:px-3 py-1 px-1 rounded-md">
       <div className="max-w-6xl p-1 lg:p-2 mx-auto h-full grid grid-cols-12 gap-2 lg:gap-6">
         {/* Left Column */}
         <div className="col-span-12 space-y-2 lg:space-y-12">
@@ -25,14 +25,14 @@ const PortfolioAbout = () => {
 
           {/* Tech Stack Grid */}
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-gray-800 rounded-lg p-2 lg:p-4 shadow-lg">
+            <div className="bg-gray-800 rounded-lg p-1 lg:p-4 shadow-lg">
               <h2 className="text-sm font-bold bg-gradient-to-b from-[#FF512F] to-[#F09819] text-transparent bg-clip-text lg:mb-2">Frontend</h2>
               <p className="text-gray-300 text-[10px] lg:text-xs">
                 React, TypeScript, Next, JavaScript, HTML/CSS, Tailwind CSS
               </p>
             </div>
 
-            <div className="bg-gray-800 rounded-lg p-2 lg:p-4 shadow-lg">
+            <div className="bg-gray-800 rounded-lg p-1 lg:p-4 shadow-lg">
               <h2 className="text-sm font-bold bg-gradient-to-b from-[#FF512F] to-[#F09819] text-transparent bg-clip-text lg:mb-2">Backend</h2>
               <p className="text-gray-300 text-[10px] lg:text-xs">
                 Node.js, Python, Express, Java, SQL, MongoDB, PostgreSQL
@@ -44,7 +44,7 @@ const PortfolioAbout = () => {
         {/* Right Column */}
         <div className="col-span-12 space-y-2 lg:space-y-12">
           {/* Experience Highlights */}
-          <div className="bg-gray-800 rounded-lg p-2 shadow-lg">
+          <div className="bg-gray-800 rounded-lg p-1 lg:p-2 shadow-lg">
             <h2 className="text-sm font-bold bg-gradient-to-b from-[#e60000] to-[#fbd206] text-transparent bg-clip-text lg:mb-4">Experience Highlights</h2>
             <div className="grid grid-cols-2 gap-1 lg:gap-4">
               {highlights.map((highlight, index) => (
@@ -60,14 +60,14 @@ const PortfolioAbout = () => {
           <div className="grid grid-cols-2 gap-2 lg:gap-4">
             <div className="bg-gray-800 rounded-lg p-1 lg:p-2 shadow-lg">
               <h2 className="text-sm font-bold bg-gradient-to-b from-[#2feaff] to-[#192ef0] text-transparent bg-clip-text lg:mb-2">Tools</h2>
-              <p className="text-gray-300 text-[10px] lg:text-xs">
+              <p className="text-gray-300 text-[9px] lg:text-xs">
                 Git, Docker, AWS, Jenkins, Jira, GCP
               </p>
             </div>
 
             <div className="bg-gray-800 rounded-lg p-1 lg:p-2 shadow-lg">
               <h2 className="text-sm font-bold bg-gradient-to-b from-[#2feaff] to-[#192ef0] text-transparent bg-clip-text lg:mb-2">Soft Skills</h2>
-              <p className="text-gray-300 text-[10px] lg:text-xs">
+              <p className="text-gray-300 text-[9px] lg:text-xs">
                 Team Leadership, Communication, Problem-Solving
               </p>
             </div>

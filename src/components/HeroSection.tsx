@@ -31,7 +31,7 @@ const HeroSection = () => {
                 <h1 className="text-white text-5xl font-bold">
                   Hi, I'm <span className="text-blue-500">Ritik Dubey</span>
                 </h1>
-                <div style={{ textAlign: "center", marginTop: "20px" }}>
+                <div className='lg:mx-0 mx-auto' style={{ textAlign: "center", marginTop: "20px" }}>
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentTitleIndex}
@@ -47,12 +47,12 @@ const HeroSection = () => {
                 </div>
               </div>
               <div className='flex flex-col items-baseline'>
-                <p className="text-gray-400 max-w-xl text-left text-wrap">
+                <p className="text-gray-400 max-w-xl text-center lg:text-left text-wrap">
                   With 1.5 years of experience building modern web applications and 
                   scalable solutions.
                 </p>
                 
-                <div className="flex gap-4 pt-4">
+                <div className="flex mx-auto gap-4 pt-4">
                   <Link className="border border-gray-600 hover:cursor-pointer text-gray-300 px-6 py-2 rounded-md hover:border-gray-500 hover:text-gray-200 transition-colors" to="ContactUs" smooth={true} duration={1500}>
                     Hire Me
                   </Link>

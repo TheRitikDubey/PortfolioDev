@@ -24,7 +24,7 @@ function App() {
         </div>
         <ContainerScroll titleComponent={
           <>
-            <h1 className="text-4xl -mt-24 font-semibold text-white dark:text-white">
+            <h1 className="text-4xl -mt-20 font-semibold text-white dark:text-white">
               Unleash the power of <br />
               <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
                 Scroll <br /> Animations
