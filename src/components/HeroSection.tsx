@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react'
 import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision'
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from 'react-scroll';
+import githubIcon from "../assets/GitHubIcon.png"
+import linkdinIcon from "../assets/LinkedInIcon.png"
+import instagram from "../assets/instagram-icon.png"
 
 const titles = [
   "Software Engineer",
@@ -52,13 +55,18 @@ const HeroSection = () => {
                   scalable solutions.
                 </p>
                 
-                <div className="flex mx-auto gap-4 pt-4">
+                <div className="flex mx-auto lg:mx-0 gap-4 pt-4">
                   <Link className="border border-gray-600 hover:cursor-pointer text-gray-300 px-6 py-2 rounded-md hover:border-gray-500 hover:text-gray-200 transition-colors" to="ContactUs" smooth={true} duration={1500}>
                     Hire Me
                   </Link>
                   <Link className="border border-gray-600 hover:cursor-pointer text-gray-300 px-6 py-2 rounded-md hover:border-gray-500 hover:text-gray-200 transition-colors" to="work" smooth={true} duration={800}>
                     View Work
                   </Link>
+                </div>
+                <div className='flex items-center justify-center mx-auto lg:mx-0 gap-4 pt-4'>
+                  <a target='_blank' href='https://www.linkedin.com/in/theritik-dubey/'><img className='rounded-xl h-10 hover:cursor-pointer' width={40} src={linkdinIcon} alt="" /></a>
+                  <a target='_blank' href='https://github.com/TheRitikDubey'><img className='rounded-xl h-10 hover:cursor-pointer' width={40} src={githubIcon} alt="" /></a>
+                  <a target='_blank' href='https://www.instagram.com/the_ritik__dubey/?hl=en'><img className='rounded-xl h-10 hover:cursor-pointer' width={40} src={instagram} alt="" /></a>
                 </div>
               </div>
             </div>
@@ -72,9 +80,6 @@ const HeroSection = () => {
         </div>
         </div>
       </BackgroundBeamsWithCollision>
-      {/* <Element name='about'>
-        <MacbookScrollDemo />
-      </Element> */}
     </div>
   )
 }
