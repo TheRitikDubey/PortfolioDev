@@ -66,7 +66,7 @@ const HeroSection = () => {
                 <div className='flex items-center justify-center mx-auto lg:mx-0 gap-4 pt-4'>
                   <a target='_blank' href='https://www.linkedin.com/in/theritik-dubey/'><img className='rounded-xl h-10 hover:cursor-pointer' width={40} src={linkdinIcon} alt="" /></a>
                   <a target='_blank' href='https://github.com/TheRitikDubey'><img className='rounded-xl h-10 hover:cursor-pointer' width={40} src={githubIcon} alt="" /></a>
-                  <a target='_blank' href='https://www.instagram.com/the_ritik__dubey/?hl=en'><img className='rounded-xl h-10 hover:cursor-pointer' width={40} src={instagram} alt="" /></a>
+                  <a target='_blank' href='https://www.instagram.com/the_ritikdubey/'><img className='rounded-xl h-10 hover:cursor-pointer' width={40} src={instagram} alt="" /></a>
                 </div>
               </div>
             </div>
