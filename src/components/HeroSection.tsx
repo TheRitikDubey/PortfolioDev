@@ -17,7 +17,7 @@ const titles = [
 
 const HeroSection = () => {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
-
+  const ResumeUrl = "https://drive.google.com/file/d/1nmQrOWdco7ajOy2R0OSWpcQ__v-KNJMO/view?usp=sharing"
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
@@ -69,9 +69,9 @@ const HeroSection = () => {
                     <a target='_blank' href='https://github.com/TheRitikDubey'><img className='rounded-xl h-10 hover:cursor-pointer' width={40} src={githubIcon} alt="" /></a>
                     <a target='_blank' href='https://www.instagram.com/the_ritikdubey/'><img className='rounded-xl h-10 hover:cursor-pointer' width={40} src={instagram} alt="" /></a>
                   </div>
-                  <div className='pt-4 lg:w-0 w-full'>
+                  <a target='_blank' href={ResumeUrl} className='pt-4 lg:w-0 w-full'>
                     <Button className=''>Resume</Button>
-                  </div>
+                  </a>
                 </div>
               </div>
 
