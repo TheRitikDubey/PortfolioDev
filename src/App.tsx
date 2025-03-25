@@ -10,7 +10,7 @@ import PortfolioAbout from './components/PortfolioAbout'
 import { Toaster } from 'react-hot-toast';
 function App() {
   return (
-    <div className="w-full bg-gray-900">
+    <div className="w-full bg-gray-900 scroll-smooth">
       {/* Hero Section */}
       <Navbar />
       <Element name='home' className="text-white text-center py-10">
