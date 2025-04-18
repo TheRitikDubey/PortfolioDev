@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
 import toast from 'react-hot-toast';
+import { div } from 'framer-motion/client';
 
 interface FormData {
   name: string;
   email: string;
   message: string;
+  isLoading?: boolean
 }
 
 interface FormErrors {
@@ -19,11 +21,11 @@ function ContactSection() {
     name: '',
     email: '',
     message: '',
+    isLoading: false
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const BASE_URL = import.meta.env.VITE_API_URL;
-  console.log(BASE_URL);
   
 
   const validateForm = (): boolean => {
@@ -52,9 +54,8 @@ function ContactSection() {
     if (validateForm()) {
       // Here you would typically send the data to your backend
       // console.log('Form submitted:', formData);
+      setFormData({...formData,isLoading: true})
       sendMailToAdmin();
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
     }
   };
 
@@ -87,6 +88,8 @@ function ContactSection() {
       },
       body: JSON.stringify(body)
     }).then(() => {
+      setIsSubmitted(true);
+      setFormData({ name: '', email: '', message: '', isLoading: false });
       toast.success('Message sent successfully!')
     })
     .catch(() => {
@@ -172,11 +175,18 @@ function ContactSection() {
               </div>
 
               <button
+              disabled={formData.isLoading}
                 type="submit"
                 className="w-full flex justify-center items-center gap-2 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
               >
-                Send Message
-                <Send className="h-4 w-4" />
+                {formData.isLoading ? (
+                  "Loading..."
+                ) : (
+                  <>
+                    Send Message
+                    <Send className="h-4 w-4" />
+                  </>
+                )}
               </button>
             </form>
           )}

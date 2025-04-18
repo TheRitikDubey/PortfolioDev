@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0', // This makes the app accessible from your local network
-    port: 3001, // Default Vite port (or use another if preferred)
+    port: 3000, // Default Vite port (or use another if preferred)
   },
   define: {
     'process.env': {
