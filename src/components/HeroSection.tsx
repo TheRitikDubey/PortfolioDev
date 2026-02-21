@@ -1,23 +1,26 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 // import { MacbookScrollDemo } from './macbookScroll'
-import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision'
+import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from 'react-scroll';
-import githubIcon from "../assets/GitHubIcon.png"
-import linkdinIcon from "../assets/LinkedInIcon.png"
-import instagram from "../assets/instagram-icon.png"
-import { Button } from './ui/moving-border';
+import { Link } from "react-scroll";
+import githubIcon from "../assets/GitHubIcon.png";
+import linkdinIcon from "../assets/LinkedInIcon.png";
+import instagram from "../assets/instagram-icon.png";
+import { Button } from "./ui/moving-border";
+import RitikAvatar from "../assets/RitikAvatar.png";
+import twitterIcon from "../assets/twitterIcon.png";
 
 const titles = [
-  "Software Engineer",
+  // "Software Engineer",
   "Experienced in Frontend and Backend Development",
-  "Expertise in AI and Cloud Computing",
+  // "Expertise in AI and Cloud Computing",
 ];
-
+const str = "Experienced in Frontend and Backend Development";
 
 const HeroSection = () => {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
-  const ResumeUrl = "https://drive.google.com/file/d/1nmQrOWdco7ajOy2R0OSWpcQ__v-KNJMO/view?usp=sharing"
+  const ResumeUrl =
+    "https://drive.google.com/file/d/1nmQrOWdco7ajOy2R0OSWpcQ__v-KNJMO/view?usp=sharing";
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
@@ -25,17 +28,20 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className=''>
+    <div className="">
       <BackgroundBeamsWithCollision>
-        <div className="bg-gray-900 h-full w-full flex items-center p-8">
+        <div className="bg-gray-900 mt-4 h-full w-full flex items-center p-8">
           <div className="max-w-4xl mx-auto w-full">
             <div className="flex justify-between items-center">
-              <div className="space-y-6 flex flex-col items-baseline">
-                <div className="space-y-2 flex flex-col items-baseline">
-                  <h1 className="text-white text-5xl font-bold">
+              <div className="flex flex-col items-baseline">
+                <div className="flex flex-col items-baseline">
+                  <h1 className="text-white mt-4 text-5xl font-bold">
                     Hi, I'm <span className="text-blue-500">Ritik Dubey</span>
                   </h1>
-                  <div className='lg:mx-0 h-[4rem] mx-auto' style={{ textAlign: "center", marginTop: "20px" }}>
+                  <div
+                    className="lg:mx-0 lg:mb-0 h-[4rem] mx-auto"
+                    style={{ textAlign: "center", marginTop: "20px" }}
+                  >
                     <AnimatePresence mode="wait">
                       <motion.div
                         key={currentTitleIndex}
@@ -45,39 +51,95 @@ const HeroSection = () => {
                         transition={{ duration: 0.8 }}
                         style={{ fontSize: "24px", fontWeight: "bold" }}
                       >
-                        {titles[currentTitleIndex]}
+                        {str}
                       </motion.div>
                     </AnimatePresence>
                   </div>
                 </div>
-                <div className='flex flex-col items-baseline'>
+                <div className="flex flex-col lg:mt-0 mt-4 items-baseline">
                   <p className="text-gray-400 max-w-xl text-center lg:text-left text-wrap">
-                    With 1.5 years of experience building modern web applications and 
-                    scalable solutions.
+                    Bringing 3+ years of experience crafting modern web
+                    applications and scalable systems for both fast-growing
+                    startups and large enterprises.
                   </p>
-                  
+
                   <div className="flex mx-auto lg:mx-0 gap-4 pt-4">
-                    <Link className="border border-gray-600 hover:cursor-pointer text-gray-300 px-6 py-2 rounded-md hover:border-gray-500 hover:text-gray-200 transition-colors" to="ContactUs" smooth={true} duration={1500}>
+                    <Link
+                      className="border border-gray-600 hover:cursor-pointer text-gray-300 px-6 py-2 rounded-md hover:border-gray-500 hover:text-gray-200 transition-colors"
+                      to="ContactUs"
+                      smooth={true}
+                      duration={1500}
+                    >
                       Hire Me
                     </Link>
-                    <Link className="border border-gray-600 hover:cursor-pointer text-gray-300 px-6 py-2 rounded-md hover:border-gray-500 hover:text-gray-200 transition-colors" to="work" smooth={true} duration={800}>
+                    <Link
+                      className="border border-gray-600 hover:cursor-pointer text-gray-300 px-6 py-2 rounded-md hover:border-gray-500 hover:text-gray-200 transition-colors"
+                      to="work"
+                      smooth={true}
+                      duration={800}
+                    >
                       View Work
                     </Link>
                   </div>
-                  <div className='flex items-center justify-center mx-auto lg:mx-0 gap-4 pt-4'>
-                    <a target='_blank' href='https://www.linkedin.com/in/theritik-dubey/'><img className='rounded-xl h-10 hover:cursor-pointer' width={40} src={linkdinIcon} alt="" /></a>
-                    <a target='_blank' href='https://github.com/TheRitikDubey'><img className='rounded-xl h-10 hover:cursor-pointer' width={40} src={githubIcon} alt="" /></a>
-                    <a target='_blank' href='https://www.instagram.com/the_ritikdubey/'><img className='rounded-xl h-10 hover:cursor-pointer' width={40} src={instagram} alt="" /></a>
+                  <div className="pt-4 w-full flex items-center justify-center lg:justify-start">
+                    <a
+                      target="_blank"
+                      href={ResumeUrl}
+                      className="lg:w-0 w-full"
+                    >
+                      <Button className="">Resume</Button>
+                    </a>
                   </div>
-                  <a target='_blank' href={ResumeUrl} className='pt-4 lg:w-0 w-full'>
-                    <Button className=''>Resume</Button>
-                  </a>
+                  <div className="flex items-center justify-center mx-auto lg:mx-0 gap-4 pt-4">
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/in/theritik-dubey/"
+                    >
+                      <img
+                        className="rounded-xl h-10 hover:cursor-pointer"
+                        width={40}
+                        src={linkdinIcon}
+                        alt=""
+                      />
+                    </a>
+                    <a target="_blank" href="https://github.com/TheRitikDubey">
+                      <img
+                        className="rounded-xl h-10 hover:cursor-pointer"
+                        width={40}
+                        src={githubIcon}
+                        alt=""
+                      />
+                    </a>
+                    <a target="_blank" href="https://x.com/The_RitikDubey">
+                      <img
+                        className="rounded-xl h-10 hover:cursor-pointer"
+                        width={40}
+                        src={twitterIcon}
+                        alt=""
+                      />
+                    </a>
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/the_ritikdubey/"
+                    >
+                      <img
+                        className="rounded-xl h-10 hover:cursor-pointer"
+                        width={40}
+                        src={instagram}
+                        alt=""
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
 
               <div className="hidden md:block">
-                <div className="bg-gray-800 w-40 h-40 rounded-full flex items-center justify-center">
-                  <div className="text-blue-500 text-4xl font-mono">&lt;/&gt;</div>
+                <div className="bg-gray-800 [clip-path:circle(50%_at_60%_4%)] w-[280px] h-[160px] flex items-center justify-center">
+                  <img
+                    src={RitikAvatar}
+                    alt="Ritik Dubey"
+                    className="w-[340px] h-[440px] object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -85,7 +147,7 @@ const HeroSection = () => {
         </div>
       </BackgroundBeamsWithCollision>
     </div>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
