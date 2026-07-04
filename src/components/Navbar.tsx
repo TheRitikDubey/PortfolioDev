@@ -37,6 +37,7 @@ const Navbar = () => {
                 <Link className='hover:cursor-pointer' to='home' duration={1000} smooth={true}>Home</Link>
                 <Link className='hover:cursor-pointer' to='about' duration={1000} smooth={true}>About</Link>
                 <Link className='hover:cursor-pointer' to='experience' duration={1000} smooth={true}>Experience</Link>
+                <Link className='hover:cursor-pointer' to='work' duration={1000} smooth={true}>Projects</Link>
                 <Link className='hover:cursor-pointer' to='skills' duration={1000} smooth={true}>Skills</Link>
                 <Link className='hover:cursor-pointer' to='ContactUs' duration={1000} smooth={true}>Contact</Link>
             </ul>
@@ -48,6 +49,7 @@ const Navbar = () => {
                   <Link onClick={handleCloseMenu} className='hover:cursor-pointer w-full text-center' to='home' duration={1000} smooth={true}>Home</Link>
                   <Link onClick={handleCloseMenu} className='hover:cursor-pointer  w-full text-center' to='about' duration={1000} smooth={true}>About</Link>
                   <Link onClick={handleCloseMenu} className='hover:cursor-pointer w-full text-center' to='experience' duration={1000} smooth={true}>Experience</Link>
+                  <Link onClick={handleCloseMenu} className='hover:cursor-pointer w-full text-center' to='work' duration={1000} smooth={true}>Projects</Link>
                   <Link onClick={handleCloseMenu} className='hover:cursor-pointer w-full text-center' to='skills' duration={1000} smooth={true}>Skills</Link>
                   <Link onClick={handleCloseMenu} className='hover:cursor-pointer w-full text-center' to='ContactUs' duration={1000} smooth={true}>Contact</Link>
               </ul>

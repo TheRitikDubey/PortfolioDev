@@ -14,7 +14,7 @@ export default defineConfig({
       VITE_API_LOCAL: JSON.stringify(process.env.VITE_API_LOCAL),
     },
   },
-  base: './', // Default: '/'
+  base: '/', // Root-absolute so client-side routes like /projects resolve assets correctly
   build: {
     outDir: 'dist', // Default output directory
     emptyOutDir: true,
