@@ -9,15 +9,15 @@ interface ExperienceItem {
 const ExperienceSection = () => {
   const experiences: ExperienceItem[] = [
     {
-      title: "Full Stack Developer",
+      title: "Senior Full Stack Developer",
       company: "Techolution",
       url: "https://www.techolution.com/",
       period: "June 2023 - Present",
       responsibilities: [
-        "Developed and maintained multiple full-stack web applications using TypeScript, Nextjs, React.js, Express and Node.js",
-        "Implemented RESTful APIs and integrated third-party services",
-        "Collaborated with cross-functional teams to deliver high-quality solutions",
-        "Optimized application performance and improved user experience"
+        "Leading a 10+ engineer team shipping enterprise products on GCP — from AI-powered code generation platforms to inventory systems serving 100,000+ users",
+        "Built AI features with LangChain, OpenAI API, and RAG pipelines for conversational AI experiences",
+        "Reduced backend latency by 35% and improved data ingestion speed by 3x across production services",
+        "Designed and scaled microservices with Node.js, Express, GraphQL, MongoDB, and Redis to handle 100,000+ concurrent users"
       ]
     },
     {
@@ -74,7 +74,7 @@ const ExperienceSection = () => {
                 hover:bg-gray-750 transition-colors duration-300
                 ${index % 2 === 0 ? 'mr-auto' : 'ml-auto'}
               `}>
-                <h3 className="text-sm font-bold text-white mb-1">
+                <h3 className="text-xl font-bold text-white mb-1">
                   {experience.title}
                 </h3>
                 <a href={experience.url} className="text-blue-400 hover:text-blue-300 mb-1 block">

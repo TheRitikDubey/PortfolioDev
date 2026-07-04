@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
 import toast from 'react-hot-toast';
-import { div } from 'framer-motion/client';
 
 interface FormData {
   name: string;

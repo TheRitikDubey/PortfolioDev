@@ -11,11 +11,10 @@ import RitikAvatar from "../assets/RitikAvatar.png";
 import twitterIcon from "../assets/twitterIcon.png";
 
 const titles = [
-  // "Software Engineer",
-  "Experienced in Frontend and Backend Development",
-  // "Expertise in AI and Cloud Computing",
+  "Senior Full Stack Developer",
+  "AI-Powered Backend Systems",
+  "Building at 100K+ User Scale",
 ];
-const str = "Experienced in Frontend and Backend Development";
 
 const HeroSection = () => {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -51,16 +50,17 @@ const HeroSection = () => {
                         transition={{ duration: 0.8 }}
                         style={{ fontSize: "24px", fontWeight: "bold" }}
                       >
-                        {str}
+                        {titles[currentTitleIndex]}
                       </motion.div>
                     </AnimatePresence>
                   </div>
                 </div>
                 <div className="flex flex-col lg:mt-0 mt-4 items-baseline">
                   <p className="text-gray-400 max-w-xl text-center lg:text-left text-wrap">
-                    Bringing 3+ years of experience crafting modern web
-                    applications and scalable systems for both fast-growing
-                    startups and large enterprises.
+                    Senior Full Stack Developer with 3+ years of experience
+                    building AI-powered, production-scale backend systems and
+                    web platforms — currently leading a 10+ engineer team
+                    shipping enterprise products on GCP at Techolution.
                   </p>
 
                   <div className="flex mx-auto lg:mx-0 gap-4 pt-4">
